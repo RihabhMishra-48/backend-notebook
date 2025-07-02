@@ -10,7 +10,7 @@ app.set('view engine', 'ejs')
 
 app.get('/', function(req,res){
     fs.readdir(`./files`, function(err, files){
-        res.render("new")
+        res.render("new", {files:files})
     })
     
 })
