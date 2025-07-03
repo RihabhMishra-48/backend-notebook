@@ -14,6 +14,14 @@ app.get('/', function(req,res){
     })
     
 })
+app.post('/create', function(req,res){
+    fs.writeFile(path.join(__dirname, 'files', `${req.body.title.split(' ').join('')}.txt`), req.body.details, function(err){
+    if (err) {
+        console.error("Error writing file:", err);
+    }
+    res.redirect('/');
+});
 
+})
 
 app.listen(3000)
