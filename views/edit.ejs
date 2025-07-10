@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+  <div class="main w-full min-h-screen p-8 bg-zinc-900 p-10 text-white">
+ <a class="text-blue-500 inline-block mb-10" href="/">Go back to home</a>   
+<div class="form bg-zinc-800 p-6 rounded-xl max-w-md mx-auto">
+      <form action="/edit" method="post">
+        <input class="w-full mb-4 p-2 rounded bg-zinc-700 text-white" type="text" placeholder="Previous name" name="previous" value="<%= filename %>" required>
+        <textarea class="w-full mb-4 p-2 rounded bg-zinc-700 text-white resize-none" placeholder="New name" name="new"  required></textarea>
+        <input class="bg-blue-500 px-4 py-2 rounded hover:yellow-600 cursor-pointer" type="submit" value="Change">
+      </form>
+    </div>
+
+  
+
+</div>
+
+ 
+
+</body>
+</html>
